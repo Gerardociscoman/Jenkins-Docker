@@ -21,8 +21,8 @@ pipeline {
             steps {
                 script{
                     sh ''' 
-                        sudo docker stop ${name_final}
-                        sudo docker rm -vf ${name_final}
+                        docker stop ${name_final}
+                        docker rm -vf ${name_final}
                     '''
                     }
                 }                                   
@@ -56,4 +56,5 @@ pipeline {
             }
         }
     }
+
 
