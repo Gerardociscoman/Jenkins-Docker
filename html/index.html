@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Nginx Custom v1</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Nginx - Página de Prueba</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>¡Nginx funcionando dentro de Docker! V1</h1>
-    <p>Este HTML está siendo servido desde mi propia imagen personalizada.</p>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Mi Nginx</h1>
+      <nav class="nav">
+        <a href="#home">Inicio</a>
+        <a href="#features">Características</a>
+        <a href="#about">Acerca</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Bienvenido a tu servidor Nginx</h2>
+        <p>Esta es una página de ejemplo servida desde un contenedor Docker con Nginx.</p>
+        <a class="btn" href="#features">Explorar</a>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <article class="card">
+        <h3>Rápido</h3>
+        <p>Nginx es ligero y rápido para servir contenido estático.</p>
+      </article>
+
+      <article class="card">
+        <h3>Fácil</h3>
+        <p>Despliegue simple mediante Docker: build y run.</p>
+      </article>
+
+      <article class="card">
+        <h3>Seguro</h3>
+        <p>Buena configuración inicial y fácil de integrar con TLS y reverse proxy.</p>
+      </article>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>Acerca</h2>
+      <p>Esta plantilla es perfecta para comprobar que tu Nginx está corriendo y sirve archivos estáticos desde <code>/usr/share/nginx/html</code>.</p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contacto</h2>
+      <form class="contact-form" action="#" method="post" onsubmit="alert('Formulario de ejemplo — no envía datos'); return false;">
+        <label>
+          Nombre
+          <input type="text" name="name" placeholder="Tu nombre" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+        </label>
+        <label>
+          Mensaje
+          <textarea name="message" rows="4" placeholder="Escribe un mensaje"></textarea>
+        </label>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Mi Nginx · Servido desde Docker</p>
+    </div>
+  </footer>
+
+  <script>
+    // año actual en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
