@@ -49,10 +49,11 @@ pipeline {
             steps {
                 script{
                     sh ''' 
-                       sudo   docker exec  ${name_final} echo 1
+                        docker exec  ${name_final} echo 1
                     '''
                     }
                 }                                   
             }
         }
     }
+
